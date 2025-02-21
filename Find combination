@@ -1,0 +1,15 @@
+#include<stdio.h>
+ #include<math.h>
+
+ int main(){
+  double n,r,fac1=1,fac2=1;
+  scanf("%lf %lf",&n,&r);
+for(int i=0;i<r;i++){
+   fac1*=(n-i);
+}
+for(int j=1;j<=r;j++){
+   fac2*=j;
+}
+printf("%.2lf",fac1/fac2);
+ return 0;
+ }
