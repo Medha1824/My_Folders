@@ -1,0 +1,21 @@
+#include<stdio.h>
+ #include<math.h>
+int main(){
+int a,b,c,lcm;
+scanf("%d %d %d",&a,&b,&c);
+int max;
+max=a;
+if(max<b)
+   max=b;
+if(max<c)
+   max=c;
+for(int i=max;i>0;i++){
+   if((max%a==0)&&(max%b==0)&&(max%c==0)){
+       lcm=max;
+      break;
+   }
+ max++;
+}
+printf("%d",lcm);
+ return 0;
+ }
