@@ -1,0 +1,23 @@
+#include <stdio.h>
+int gcd(int a, int b)
+{
+    if (a == 0)
+        return b;
+    return gcd(b % a, a);
+}
+
+int  findLCM(int array[], int n)
+{
+    int result = array[0];
+    for (int i = 1; i < n; i++)
+        result = ((array[i] * result) / (gcd(array[i], result)));
+     return  result;
+}
+
+int main()
+{
+    int array[] = {2,4,6,12};
+    int n = sizeof(array) / sizeof(array[0]);
+    printf("%d", findLCM(array, n));
+    return 0;
+}
