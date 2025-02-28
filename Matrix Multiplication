@@ -1,0 +1,48 @@
+#include<stdio.h>
+int main()
+{
+    int row, col,a,b;
+    printf("1. Enter row and column size: ");
+    scanf("%d %d",&row,&col);
+    int A[row][col];
+    printf("Enter elements for a %dx%d matrix:\n",row,col);
+    for (int i = 0; i < row; i++){
+        for (int j = 0; j < col; j++){
+            printf("Enter element [%d][%d]: ", i+1, j+1);
+            scanf("%d", &A[i][j]);
+        }
+    }
+   printf("2. Enter row and column size: ");
+    scanf("%d %d",&a,&b);
+    int B[a][b];
+    printf("Enter elements for a %dx%d matrix:\n",a,b);
+    for (int i = 0; i < a; i++){
+        for (int j = 0; j < b; j++){
+            printf("Enter element [%d][%d]: ", i+1, j+1);
+            scanf("%d", &B[i][j]);
+        }
+    }
+  int result[row][col];
+   if(col==a){
+  for(int i=0;i<row;i++){
+    for(int j=0;j<col;j++){
+        result[i][j]=0;
+        for(int k=0;k<a;k++){
+            result[i][j]+= A[i][k] * B[k][j];
+        }
+    }
+  }
+    printf("Result of Matrix Multiplication:\n");
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            printf("%d ", result[i][j]);
+        }
+        printf("\n");
+    }
+   }
+   else
+    printf("Matrix multiplication cannot be done");
+    return 0;
+}
