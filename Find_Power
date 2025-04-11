@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,pow=1,exp;
+    printf("Enter the base number ");
+    scanf("%d",&a);
+    printf("Enter the power value ");
+    scanf("%d",&exp);
+    for(int i=1;i<=exp;i++){
+        pow=pow*a;
+    }
+    printf("The answer %d to the power %d is %d",a,exp,pow);
+    return 0;
+}
